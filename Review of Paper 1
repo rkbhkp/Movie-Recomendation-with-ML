@@ -1,0 +1,21 @@
+Analysis of sentiment based movie reviews using machine learning techniques by Sachin Chirgaiya et. all
+
+Built a model based on Natural Language Toolbox kit (NLTk), a machine learing classifier, supervised learning, Naive bayes classifier, logisitic regression, and a multinomial naive bayes classifier.  The methodology used was to develop a new movie review dataset,loading the raw text data, cleaning of raw data, vocabulary design, and collect the earlies used data.  The researchers then divide the data into trounches.  These include the training and test datasets.  Some code used was:
+
+# def classify(self, feature):
+# division = []
+# for sc in self. classifier:
+# data = sc.classify(feature)
+# division.append data(value)
+# return mode(division)
+
+# def confidence(self, feature):
+# division = []
+# for sc in self. classifier:
+# doc = sc.classify(feature)
+# division.append(doc)
+# choice division = division.count(mode(division))
+# confidence = choice division/length(division)
+# return confidence
+
+The results were right skewed in nature.  The model was able to achieve a reasonable level of success in the low 80% to mide 90%.  The analysis continued to improve o earlier studies, and showed that achieving high levels of fidelity in reviewing both positive and negative reviews.  
