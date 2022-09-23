@@ -1,11 +1,22 @@
 Minutes from Meeting (22SEP)
   1. Opened google dock to go over project.
+  
   2. Created GitHub repository.
+  
   3. Went over articles.
+  
   4. Assigned tasks to members to go over aspects of the assignement
       Introduction - Ben
       Literary Review - Charles
       Research Article discussion - Pingping / Charles
       Data - Ryan
       (This will change depending on outcome of research)
-  5. Discussed meeting time for next meeting.
+      
+  5. Business Problem: Movie recommendation generator: pass into the ML algorithm what movies/ genres you like and it will return movies that it thinks you would like.
+     Include Movie Length parameter.  
+     Favorite actors/directors
+     Genre
+     Country of origin/language
+     Possible-tie in to Plex
+     
+  6. Discussed meeting time for next meeting.
