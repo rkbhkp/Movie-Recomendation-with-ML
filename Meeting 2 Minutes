@@ -1,0 +1,7 @@
+Minutes 
+
+Talked about database diagram.  The data is built as a SQL database.  We can use the movieid to pull data from other websites to get more fidelity on the individual movies. We can use the given data to in genomeScore to pull the magnitude value of the genre rating.  
+
+We then set up our github so everyone could use it.  This will help us to work on the code individually.  
+
+We will work on writing all of the reviews and begin the Juypter Notebook.  
