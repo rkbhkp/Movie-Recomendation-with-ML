@@ -10,23 +10,30 @@ ratings = "./pickle/ratings.pkl"
 tags = "./pickle/tags.pkl"
 
 
-def create_pkl():
-    genomeScores_csv = pd.read_csv("./ml-25m/genome-scores.csv")
-    genomeTags_csv = pd.read_csv("./ml-25m/genome-tags.csv")
-    links_csv = pd.read_csv("./ml-25m/links.csv")
-    movies_csv = pd.read_csv("./ml-25m/movies.csv")
+def create_pkl(all=False):
     ratings_csv = pd.read_csv("./ml-25m/ratings.csv")
-    tags_csv = pd.read_csv("./ml-25m/tags.csv")
-    csvs = [    genomeScores_csv,
-        genomeTags_csv,
-        links_csv,
-        movies_csv,
-        ratings_csv,
-        tags_csv]
-    names = ["genomeScores", "genomeTags", "links", "movies", "ratings", "tags"]
+    
+    # if you pass True into create_pkl() it will recreate the pickle files for every csv,
+    # by default it will only create the ratings csv since that one was too large to add to git and has to be done manually on each persons computer. 
+    if all:  
+        genomeScores_csv = pd.read_csv("./ml-25m/genome-scores.csv")
+        genomeTags_csv = pd.read_csv("./ml-25m/genome-tags.csv")
+        links_csv = pd.read_csv("./ml-25m/links.csv")
+        movies_csv = pd.read_csv("./ml-25m/movies.csv")
+        tags_csv = pd.read_csv("./ml-25m/tags.csv")
+        csvs = [    genomeScores_csv,
+            genomeTags_csv,
+            links_csv,
+            movies_csv,
+            ratings_csv,
+            tags_csv]
+        names = ["genomeScores", "genomeTags", "links", "movies", "ratings", "tags"]
 
-    for i in range(len(csvs)):
-        csvs[i].to_pickle(f"./pickle/{names[i]}.pkl")
+        for i in range(len(csvs)):
+            csvs[i].to_pickle(f"./pickle/{names[i]}.pkl")
+    else:
+        ratings_csv.to_pickle("./pickle/ratings.pkl")        
+
 
 def add_to_pickle(path, item):
     with open(path, 'ab') as file:
