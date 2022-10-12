@@ -48,6 +48,10 @@ def read_from_pickle(path):
         except EOFError:
             pass
 def main():
+    # uncomment this to make the pickle file for ratings
+    # make sure to download the zip file from the MovieLens dataset here and unzip it into the ml-25m folder
+    # https://grouplens.org/datasets/movielens/25m/
+    #create_pkl()
     for item in read_from_pickle(genomeScores):
         print(repr(item))
 
