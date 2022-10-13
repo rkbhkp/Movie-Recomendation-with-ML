@@ -8,7 +8,12 @@ links = "./pickle/links.pkl"
 movies = "./pickle/movies.pkl"
 ratings = "./pickle/ratings.pkl"
 tags = "./pickle/tags.pkl"
-
+pkls = [    genomeScores,
+        genomeTags,
+        links,
+        movies,
+        ratings,
+        tags]
 
 def create_pkl(all=False):
     ratings_csv = pd.read_csv("./ml-25m/ratings.csv")
@@ -52,8 +57,13 @@ def main():
     # make sure to download the zip file from the MovieLens dataset here and unzip it into the ml-25m folder
     # https://grouplens.org/datasets/movielens/25m/
     #create_pkl()
-    for item in read_from_pickle(genomeScores):
-        print(repr(item))
+    #for item in read_from_pickle(genomeScores):
+    #    repr(item)
+
+    # Counts how many rows have null values in each table
+    for file in pkls:
+        df = pd.read_pickle(file)
+        print(file, len(df[df.isnull().any(axis=1)]))
 
     return 0
 
