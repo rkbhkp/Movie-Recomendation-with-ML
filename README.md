@@ -1,6 +1,3 @@
 # IST-Project
-
-srsewrser
-asdf
-
-test
+required packages: 
+    pip install pandasql
